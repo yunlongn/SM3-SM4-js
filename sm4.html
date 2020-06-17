@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
-        
 
-        
+
+
         <script src="js/utils/jquery-3.3.1.min.js"></script>
 		<script src="js/crypto/sm4.js"></script>
 
@@ -13,7 +13,7 @@
 	<body>
 		<div style="text-align:center;">
 		<form action="#" method="post" >
-			
+
 			<table  style="margin-left: auto;margin-right: auto;"><!--border=0 cellpadding=0 cellspacing=0-->
 	            <tr>
 	                <td style="width:auto;text-align: right;">
@@ -57,7 +57,7 @@
 	                </td>
 		      	</tr>
 	      </table>
-			
+
 		</form>
 		</div>
 		<script>
@@ -78,7 +78,7 @@
 				// console.log(s4.decryptData_ECB("3xwqW+19y7xGzFVg/Plsuw=="));
 				$("#resulttext").val(s4.encryptData_ECB(inputtext))
 			});
-			
+
 			/*
 			 * 测试ecb sm4解密
 			 */
@@ -116,7 +116,7 @@
 				// console.log(s4.decryptData_ECB("3xwqW+19y7xGzFVg/Plsuw=="));
 				$("#resulttext").val(s4.encryptData_CBC(inputtext))
 			});
-			
+
 			/*
 			 * 测试cbc sm4解密
 			 */
@@ -136,7 +136,7 @@
 				// console.log(s4.decryptData_ECB("3xwqW+19y7xGzFVg/Plsuw=="));
 				$("#resulttext").val(s4.decryptData_CBC(inputtext))
 			});
-			
+
 			/**
 			 * 随机生成数据测试
 			 */
@@ -148,13 +148,13 @@
                 	realLen = parseInt(Math.random()*1024)+1;
                 }
 				var data = new Array(realLen);
-				
+
 				for(var i = 0;i<realLen;i++){
 					data[i] = parseInt(Math.random()*256);
 				}
 				return data;
 			}
-			
+
 			/**
 			 * 生成密钥
 			 */
@@ -168,9 +168,9 @@
 				return key.toUpperCase();
 			}
 
-			
+
 			function arrayCompare(src1,pos1,src2,pos2,len) {
-			
+
 				if(src1.length - pos1 < len) {
 					return -1;
 				}
@@ -182,11 +182,11 @@
 						return -1;
 					}
 				}
-				
+
 				return 0;
 			}
-			
-			
+
+
 
 		</script>
     </body>
